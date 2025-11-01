@@ -49,111 +49,61 @@ Poesia Sem rimas<br>
 Apenas como és<br>
 Um diamante sujo<br>
 Que após a chuva<br>
-Volta a reluzir`,
-"Penumbras":``,
-"Meus Versos":``,
-"Alinhados":``,
-"O Oco e o Verso":``,
-"Cebola":``,
-"Versos no Silêncio":``,
-"Há Aroma no Espinho":``,
-"Poesia não tem Pátria":``,
-"Antes Algumas Coisas":``,
-"Semente":``,
-"Brisa de Palavras":``,
-"Imperatriz da Cor":``,
-"Condenado Eu":``,
-"Por essa via":``,
-"Casal de um":``,
-"Super-homens":``,
-"Porta Almas":``,
-"Pensar ou sentir":``,
-"Sertralina":``,
-"Will":``,
-"Poema Atômico":``,
-"Doce para Dormir":``,
-"Peso Bobo":``,
-"Financiada até a Morte":``,
-"Viúva de Porcelana":``,
-"107":``,
-"Figuras da Vida Real":``,
-"Sensatez Canina":``,
-"Vitamina R":``,
-"Versos no silêncio":``,
-"Eternos até o fim":``,
-"Breve vive uma poesia":``,
-"Nua e Crua":``,
-"O fim do Fim":``,
-"Chave da Porta":``,
-"Se fores…":``,
-"O mundo não chama pelo nome":``,
-"Quarto Fantasma":``,
-"1939":``,
-"Brisa de palavras":``,
-"Saia devagar":``,
-"Pra sempre novidades":``,
-"Imperatriz da cor":``,
-"Condenado eu":``,
-"Por essa via":``,
-"Novos mares":``,
-"Todo verde":``,
-"Lembrei":``,
-"Seu Domingo":``,
-"Um dia":``,
-"Poema cor de luz":``,
-"Convivo":``,
-"Pó eras tu":``,
-"Orvalho":``,
-"A meu ver":``,
-"Má temática":``,
-"O fim da humanidade":``,
-"Flores do Alvorecer":``,
-"Solitude":``,
-"Insônia":``,
-"Registro vitalício":``,
-"Fake Life":``,
-"Desconfio":``,
-"Nostalgia":``,
-"Auto resposta":``,
-"A evolução da espécie":``,
-"Neblina":``,
-"Para as mulheres":``,
-"Meu divã":``,
-"Pernas que falam":``,
-"Doce engano":``,
-"Ao Poeta":``,
+Volta a reluzir`
 };
 
 const fontes = ["Arial", "Verdana", "Georgia", "Courier New", "Comic Sans MS", "Trebuchet MS", "Impact"];
 const cores = ["#e63946", "#457b9d", "#2a9d8f", "#f4a261", "#a8dadc", "#ffb703", "#6a4c93", "#ff006e", "#3a0ca3"];
 
-const container = document.getElementById("links-container");
+
 const poesiaContainer = document.getElementById("poesia-container");
 
-Object.keys(poesias).forEach(titulo => {
-  const link = document.createElement("a");
-  link.className = "link-item";
+const cronicas = {
+  "O Café da Tarde": `Era uma tarde comum, mas o cheiro do café fresco parecia anunciar algo extraordinário...`,
+  "A Janela da Rua 7": `Toda manhã, ela observava o mundo pela janela. Até que um dia, o mundo resolveu observá-la de volta...`
+};
 
-  const h2 = document.createElement("h2");
-  h2.textContent = titulo;
+const containerPoesias = document.getElementById("links-poesias");
+const containerCronicas = document.getElementById("links-cronicas");
 
-  // Estilos aleatórios
-  h2.style.fontSize = `${Math.floor(Math.random() * 10 + 16)}px`;
-  h2.style.color = cores[Math.floor(Math.random() * cores.length)];
-  h2.style.fontFamily = fontes[Math.floor(Math.random() * fontes.length)];
-  h2.style.fontWeight = Math.random() > 0.5 ? "bold" : "normal";
+function criarLinks(objeto, container) {
+  Object.keys(objeto).forEach(titulo => {
+    const link = document.createElement("a");
+    link.className = "link-item";
 
-  // Evento de clique
-  link.onclick = () => {
-    poesiaContainer.innerHTML = `<h3>${titulo}</h3><p>${poesias[titulo]}</p>`;
-    poesiaContainer.style.display = "block";
-    window.scrollTo({ top: poesiaContainer.offsetTop, behavior: 'smooth' });
-  };
+    const h2 = document.createElement("h2");
+    h2.textContent = titulo;
+    h2.style.fontSize = `${Math.floor(Math.random() * 10 + 16)}px`;
+    h2.style.color = cores[Math.floor(Math.random() * cores.length)];
+    h2.style.fontFamily = fontes[Math.floor(Math.random() * fontes.length)];
+    h2.style.fontWeight = Math.random() > 0.5 ? "bold" : "normal";
 
-  link.appendChild(h2);
-  container.appendChild(link);
-});
+    link.onclick = () => {
+      poesiaContainer.innerHTML = `<h3>${titulo}</h3><p>${objeto[titulo]}</p>`;
+      poesiaContainer.style.display = "block";
+      window.scrollTo({ top: poesiaContainer.offsetTop, behavior: 'smooth' });
+    };
+
+    link.appendChild(h2);
+    container.appendChild(link);
+  });
+}
+
+function filtrarConteudo() {
+  const tipo = document.getElementById("tipo").value;
+  containerPoesias.style.display = "none";
+  containerCronicas.style.display = "none";
+  poesiaContainer.style.display = "none";
+
+  if (tipo === "poesias") {
+    containerPoesias.style.display = "flex";
+  } else if (tipo === "cronicas") {
+    containerCronicas.style.display = "flex";
+  }
+}
 
 window.onload = function () {
+  criarLinks(poesias, containerPoesias);
+  criarLinks(cronicas, containerCronicas);
   alert("Olà! Seja bem-vindo(a) ao Poexímia");
 }

@@ -11,7 +11,6 @@
 </head>
 
 <body>
-    <body>
     <h1> <span style="border: 3px solid black; padding: 1px;">P|o|e|x|í|m|i|a</span>
     </h1>
 <header>                             
@@ -21,14 +20,20 @@
       <a href="#contatos">Contatos</a>
 
 </header>
-
-<br>
-<hr>
+<div style="text-align: center; margin: 20px;">
+  <label for="tipo">Escolha o tipo de leitura:</label>
+  <select id="tipo" onchange="filtrarConteudo()">
+    <option value="">-- Selecione --</option>
+    <option value="poesias">Poesias</option>
+    <option value="cronicas">Crônicas</option>
+  </select>
+</div>
 <!-- PARTE DAS POESIAS COMEÇA AQUI -->
 <main>
     <div id="poesia-container" style="display: none;"></div>
 <hr>
-<div id="links-container"></div>
+<div id="links-poesias" class="links-container"></div>
+<div id="links-cronicas" class="links-container" style="display: none;"></div>
 <hr>
 <h2 id="sobre">Sobre o autor</h2>
 <p>Olá! Eu sou Samuel , ....Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam veritatis, illum impedit esse obcaecati ratione voluptate sed commodi dicta rem ipsum, praesentium atque! Vel, modi ex dolor iste illo mollitia.</p>
