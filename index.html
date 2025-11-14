@@ -5,22 +5,31 @@
 <head>
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poexímia</title>
+    <title>Poesias e algumas crônicas</title>
     <link rel="stylesheet" href=".reset.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <h1> <span style="color: brown;"><i>editora</i></span><br>
-      <span style="border: 3px solid brown; padding: 1px;">Levoar</span>
-    </h1>
+
 <header>                             
-<h1>Poesias e outras crônicas</h1>
+
+
   <nav>
-      <a href="#sobre">Sobre o autor</a>
-      <a href="#contatos">Contatos</a>
+    <ul>
+      <li><a href="#sobre">Sobre o autor</a></li>
+     <li> <a href="#contatos">Contatos</a></li>
+    </ul>
   </nav>
+
+   <a href="index.html">
+  <h1><i>POESIAS</i><br>
+  <span style="border: 3px solid brown; padding: 1px; background-color: brown;color: aliceblue;">
+    e algumas crônicas</span>
+    </h1></a>
+
 </header>
+
 <div style="text-align: center; margin: 20px;">
   <label for="tipo">Escolha o tipo de leitura:</label>
   <select id="tipo" onchange="filtrarConteudo()">
@@ -32,6 +41,18 @@
 <!-- PARTE DAS POESIAS COMEÇA AQUI -->
 <main>
     <div id="poesia-container" style="display: none;"></div>
+    <div id="formulario-comentario" style="display:none; margin-top: 30px;">
+  <h3>Deixe seu comentário</h3>
+  <form method="POST" action="https://staticman3.herokuapp.com/v3/entry/github/samfulldev/poesiasealgumascronicas/main/comments">
+    <input type="hidden" name="options[slug]" id="slug">
+    <input type="text" name="name" placeholder="Seu nome" required><br>
+    <input type="text" name="instagram" placeholder="@instagram (opcional)"><br>
+    <textarea name="message" placeholder="Seu comentário" required></textarea><br>
+    <button type="submit">Enviar</button>
+  </form>
+</div>
+
+<div id="comentarios" style="margin-top: 20px;"></div>
 <hr>
 <div id="links-poesias" class="links-container"></div>
 <div id="links-cronicas" class="links-container" style="display: none;"></div>

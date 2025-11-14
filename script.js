@@ -161,11 +161,17 @@ function criarLinks(objeto, container) {
     h2.style.fontFamily = fontes[Math.floor(Math.random() * fontes.length)];
     h2.style.fontWeight = Math.random() > 0.5 ? "bold" : "normal";
 
-    link.onclick = () => {
-      poesiaContainer.innerHTML = `<h3>${titulo}</h3><p>${objeto[titulo]}</p>`;
-      poesiaContainer.style.display = "block";
-      window.scrollTo({ top: poesiaContainer.offsetTop, behavior: 'smooth' });
-    };
+  link.onclick = () => {
+  poesiaContainer.innerHTML = `<h3>${titulo}</h3><p>${objeto[titulo]}</p>`;
+  poesiaContainer.style.display = "block";
+
+  // Mostrar formulário e comentários
+  document.getElementById("formulario-comentario").style.display = "block";
+  document.getElementById("slug").value = titulo.replace(/\s+/g, "-").toLowerCase();
+  carregarComentarios(titulo.replace(/\s+/g, "-").toLowerCase());
+
+  window.scrollTo({ top: poesiaContainer.offsetTop, behavior: 'smooth' });
+};
 
     link.appendChild(h2);
     container.appendChild(link);
@@ -188,5 +194,38 @@ function filtrarConteudo() {
 window.onload = function () {
   criarLinks(poesias, containerPoesias);
   criarLinks(cronicas, containerCronicas);
-  alert("Olà! Seja bem-vindo(a) ao Poexímia");
+  alert("Olà! Seja bem-vindo(a) ao Poesias e algumas crônicas");
+}
+function carregarComentarios(slug) {
+  const comentariosDiv = document.getElementById("comentarios");
+  comentariosDiv.innerHTML = "<p>Carregando comentários...</p>";
+
+  fetch(`https://samfulldev.github.io/poesiasealgumascronicas/_data/comments/${slug}/`)
+    .then(res => res.text())
+    .then(html => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, "text/html");
+      const links = Array.from(doc.querySelectorAll("a")).filter(link => link.href.endsWith(".json"));
+
+      return Promise.all(links.map(link => fetch(link.href).then(r => r.json()).catch(() => null)));
+    })
+    .then(comentarios => {
+      comentariosDiv.innerHTML = "<h3>Comentários</h3>";
+      comentarios
+        .filter(c => c)
+        .sort((a, b) => new Date(a.date) - new Date(b.date))
+        .forEach(c => {
+          const div = document.createElement("div");
+          div.className = "comentario";
+          div.innerHTML = `
+            <p><strong>${c.name}</strong> disse:</p>
+            <p>${c.message}</p>
+            ${c.instagram ? `<p><a href="https://instagram.com/${c.instagram.replace(/^@/, '')}" target="_blank">@${c.instagram.replace(/^@/, '')}</a></p>` : ""}
+            <hr>`;
+          comentariosDiv.appendChild(div);
+        });
+    })
+    .catch(() => {
+      comentariosDiv.innerHTML = "<p>Não foi possível carregar os comentários.</p>";
+    });
 }

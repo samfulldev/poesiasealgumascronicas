@@ -1,0 +1,13 @@
+comments:
+  allowedFields: ["name", "instagram", "message"]
+  requiredFields: ["name", "message"]
+  branch: "main"
+  path: "_data/comments/{options.slug}"
+  filename: "comment-{@timestamp}"
+  format: "json"
+  moderation: false
+  generatedFields:
+    date:
+      type: "date"
+      options:
+        format: "iso8601"
