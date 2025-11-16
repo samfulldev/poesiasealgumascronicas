@@ -13,7 +13,30 @@ header nav ul {
   justify-content: center;
   padding: 0;
   margin: 0;
+  gap: 30px;
 }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex; /* Deixa os itens lado a lado */
+      justify-content: center;
+      gap: 30px; /* Espaçamento entre os itens */
+    }
+
+    nav ul li a {
+      color: brown;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      padding: 10px 15px;
+      transition: background-color 0.3s;
+    }
+
+   nav ul li a:hover {
+      background-color: #f8f6f6;
+      border-radius: 5px;
+    }
 
 
 nav a: {
@@ -23,9 +46,7 @@ nav a: {
   text-decoration: none; /* Remove o sublinhado */
 }
 
-nav a:hover {
-  color: darkorange; /* Cor do texto ao passar o mouse (laranja escuro) */
-}
+
 
 
 a {
@@ -55,7 +76,7 @@ body {
         text-align: start;    
     }
 
-    h2 {
+    section#sobre, section#contatos {
         color: #AD9BBF;
         font-family: 'Franklin Gothic Medium', sans-serif;
         font-weight: bold;
@@ -157,9 +178,66 @@ footer a.whatsapp:hover {
 }
 
 .foto-footer img {
-  width: 100px; /* tamanho menor */
+  width: 150px; /* Tamanho reduzido */
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+@media (max-width: 600px) {
+  .foto-footer img {
+    width: 100px;
+  }
+}
+
+.autor-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin: 40px 20px;
+  flex-wrap: wrap; /* Para adaptar em telas menores */
+}
+
+.autor-texto {
+  flex: 1;
+  min-width: 250px;
+  max-width: 700px;
+  text-align: justify;
+  font-family: Arial, sans-serif;
+}
+
+.leitura-container {
+  text-align: center;
+  margin: 30px 0;
+  font-family: 'Franklin Gothic Medium', sans-serif;
+}
+
+.leitura-titulo {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: brown;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 0 #f8f6f6;
+}
+
+.leitura-select {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 2px solid brown;
+  border-radius: 6px;
+  background-color: #f8f6f6;
+  color: #333;
+  font-family: Arial, sans-serif;
+  transition: box-shadow 0.3s ease;
+}
+
+.leitura-select:hover,
+.leitura-select:focus {
+  box-shadow: 0 0 5px rgba(165, 42, 42, 0.5);
+  outline: none;
+}
+
+
 

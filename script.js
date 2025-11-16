@@ -118,7 +118,7 @@ E os ricos viveram felizes para sempre `,
 -Ahm?
 
 E, num relance, abruptamente, o professor arrancou o livro das mãos do entrevistador e, como um raio, correu pela rua afora, sumindo ao dobrar a esquina.`,
-"Crianças coloridas": `Eu devia ter aprendido... que guarda-chuvas não foram feitos para mim.
+"Não guarde chuvas": `Eu devia ter aprendido... que guarda-chuvas não foram feitos para mim.
 
 Bobagem levar guarda-chuva hoje, disse meu vizinho ao me ver saindo, carregando aquele troço estrategicamente vermelho, mas desnecessariamente bem maior do que eu. Fingindo não ter ouvido o conselho, segui em frente.
 
@@ -194,7 +194,7 @@ function filtrarConteudo() {
 window.onload = function () {
   criarLinks(poesias, containerPoesias);
   criarLinks(cronicas, containerCronicas);
-  alert("Olà! Seja bem-vindo(a) ao Poesias e algumas crônicas");
+  
 }
 function carregarComentarios(slug) {
   const comentariosDiv = document.getElementById("comentarios");
@@ -229,3 +229,4 @@ function carregarComentarios(slug) {
       comentariosDiv.innerHTML = "<p>Não foi possível carregar os comentários.</p>";
     });
 }
+
