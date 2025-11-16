@@ -84,12 +84,12 @@ body {
     }
     
 .links-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 16px;
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 20px;
-  justify-content: center;
 }
 @media (max-width: 600px) {
   .links-container {
@@ -110,11 +110,12 @@ body {
 
 .link-item h2 {
   margin: 0;
-  padding: 8px 12px;
+  padding: 12px;
   border-radius: 6px;
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  white-space: nowrap;
+  text-align: center;
+  font-size: 16px;
   transition: transform 0.2s;
 }
 
