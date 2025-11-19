@@ -229,4 +229,3 @@ function carregarComentarios(slug) {
       comentariosDiv.innerHTML = "<p>Não foi possível carregar os comentários.</p>";
     });
 }
-

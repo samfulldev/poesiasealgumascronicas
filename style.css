@@ -155,7 +155,7 @@ footer {
 }
 
 footer h2 {
-  color: #201f1f; /* azul vibrante */
+  color: brown; /* azul vibrante */
   font-size: 24px;
   margin-bottom: 16px;
 }
@@ -217,9 +217,7 @@ footer a.whatsapp:hover {
   margin: 40px auto;
   max-width: 1000px;
   padding: 0 20px;
-  flex-wrap: wrap;
 }
-
 
 .autor-texto {
   flex: 1;
@@ -231,6 +229,16 @@ footer a.whatsapp:hover {
   padding: 10px;
   border-radius: 8px;
 }
+
+/* Novo bloco apenas para imagem */
+.autor-foto img {
+  max-width: 180px;
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
+
 
 
 .leitura-container {
