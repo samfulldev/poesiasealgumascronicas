@@ -6,30 +6,23 @@
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poesias e algumas crônicas</title>
-    <link rel="stylesheet" href=".reset.css">
+    <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
-
 <header>                             
-
-
   <nav>
     <ul>
       <li><a href="#sobre">Sobre o autor</a></li>
      <li> <a href="#contatos">Contatos</a></li>
     </ul>
   </nav>
-
    <a href="index.html">
   <h1><i>POESIAS</i><br>
   <span style="border: 3px solid brown; padding: 1px; background-color: brown;color: aliceblue;">
     e algumas crônicas</span>
     </h1></a>
-
 </header>
-
 <div class="leitura-container">
   <label for="tipo" class="leitura-titulo">Escolha o tipo de leitura:</label>
   <select id="tipo" onchange="filtrarConteudo()" class="leitura-select">
@@ -40,13 +33,10 @@
 </div>
 <!-- PARTE DAS POESIAS COMEÇA AQUI -->
 <main>
-
 <div id="poesia-container" style="display: none;"></div>
 <div id="links-poesias" class="links-container"></div>
 <div id="links-cronicas" class="links-container" style="display: none;"></div>
-
 <div class="autor-container" id="sobre">
-
   <div class="autor-texto">
     <h2>Sobre o autor</h2>
     <p>
@@ -56,22 +46,17 @@
       Economista por formação e bancário por profissão, é apaixonado pela tecnologia da informação, sendo um estudante da área. Atualmente, tem se dedicado a projetos digitais, como este site, o qual é idealizador e criador.
     </p>
   </div>
-
-  <!-- Agora a imagem está na coluna certa -->
   <div class="autor-foto">
     <img src="fotoblog.png" alt="Foto do autor">
   </div>
-
 </div>
-
 </main>
-                                        <!-- FOOTER -->
+<!-- FOOTER -->
 <footer>
   <section id="contatos">Contatos</section>
   <p>Se você tiver alguma sugestão de conteúdo, ou quiser entrar em contato com o autor, escolha uma das opções abaixo:</p>
   <a href="mailto:samuelcunhace@gmail.com" target="_blank" class="email">Enviar um e-mail</a>
   <a href="https://wa.me/+5585991969494" target="_blank" class="whatsapp">WhatsApp</a>
-   
 </footer>
 <script src="./script.js"></script>
 </body>

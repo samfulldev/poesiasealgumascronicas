@@ -39,7 +39,7 @@ header nav ul {
     }
 
 
-nav a: {
+nav a {
   font-size: 25px;       /* Tamanho da fonte */
   color: brown;        /* Cor do texto (laranja) */
   font-weight: bold;     /* Deixa o texto em negrito */
@@ -77,13 +77,13 @@ body {
     }
     
 .links-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 16px;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
+  justify-content: center;
+  padding: 10px;
 }
+
 @media (max-width: 600px) {
   .links-container {
     flex-direction: column;
@@ -232,7 +232,7 @@ footer a.whatsapp:hover {
 
 /* Novo bloco apenas para imagem */
 .autor-foto img {
-  max-width: 180px;
+  max-width: 120px;
   width: 100%;
   border-radius: 12px;
   display: block;
@@ -274,7 +274,62 @@ footer a.whatsapp:hover {
   outline: none;
 }
 
+/* =============================
+   ESTILO DOS BOTÕES DE TEXTOS
+   ============================= */
 
+.item-botao {
+    background-color: #ffffff !important;  /* fundo sempre branco */
+    padding: 12px 18px;
+    border-radius: 6px;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    /* Botão sempre do mesmo tamanho visual */
+    min-height: 45px;
+
+    /* Efeito suave ao passar o mouse */
+    transition: transform 0.25s ease-in-out, 
+                box-shadow 0.25s ease-in-out;
+}
+
+/* Cresce no hover */
+.item-botao:hover {
+    transform: scale(1.07);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.link-item h2 {
+  display: inline-block; /* <<< faz o botão ter o tamanho do conteúdo */
+  margin: 0 auto;        /* centraliza dentro da célula */
+  padding: 12px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+  font-size: 16px;
+  transition: transform 0.2s;
+}
+.item-botao {
+    display: inline-block;       /* Botão fica apenas do tamanho do texto */
+    padding: 12px 18px;
+    background-color: #ffffff;   /* fundo fixo */
+    border-radius: 6px;
+    border: 2px solid #00000020;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    font-size: 16px;             /* tamanho de fonte fixo */
+    width: auto;                 /* impede de ocupar largura cheia */
+    margin: auto;
+}
+
+/* efeito ao passar o mouse */
+.item-botao:hover {
+    transform: scale(1.08);
+}
 
 
 
