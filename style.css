@@ -5,7 +5,7 @@ header {
     padding: 10px 0;
     text-align: center;
     margin-top: 0;
-    position: relative
+    position: relative;
 }
 header nav ul {
   list-style: none;
@@ -20,8 +20,10 @@ header nav ul {
       margin: 0;
       padding: 0;
       display: flex; /* Deixa os itens lado a lado */
-      justify-content: center;
-      gap: 30px; /* Espaçamento entre os itens */
+      justify-content: flex-end;
+      gap: 10px; /* Espaçamento entre os itens */
+      margin-right: 20px
+    
     }
 
     nav ul li a {
@@ -31,6 +33,7 @@ header nav ul {
       font-family: Arial, sans-serif;
       padding: 10px 15px;
       transition: background-color 0.3s;
+
     }
 
    nav ul li a:hover {
@@ -40,7 +43,7 @@ header nav ul {
 
 
 nav a {
-  font-size: 25px;       /* Tamanho da fonte */
+  font-size: 15px;       /* Tamanho da fonte */
   color: brown;        /* Cor do texto (laranja) */
   font-weight: bold;     /* Deixa o texto em negrito */
   text-decoration: none; /* Remove o sublinhado */
@@ -49,6 +52,16 @@ nav a {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+nav {
+  position: fixed;
+  z-index: 1000;
+    top: 0;
+  left: 0;
+  width: 100%;              /* ocupa toda a largura da tela */
+  background-color: #0c0c0c;
+
 }
 
 body {

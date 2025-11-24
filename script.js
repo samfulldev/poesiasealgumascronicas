@@ -42,13 +42,18 @@ const poesias = [
     "Brisa de palavras.txt",
     "Imperatriz da cor.txt",
     "Por essa via.txt",
+    "Casal de um.txt",
+    "Super-homens.txt",
+    "Porta almas.txt",
+    "Pensar ou sentir.txt",
+    "Sertralina.txt",
 ];
 
 // Mesma coisa para crônicas:
 const cronicas = [
-    "cronica1.txt",
-    "cronica2.txt",
-    "cronica3.txt"
+    "Confissão de um letrado.txt",
+    "O fim do Fim.txt",
+    "Falta humanidade.txt"
 ];
 
 
