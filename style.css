@@ -63,7 +63,17 @@ nav {
   background-color: #0c0c0c;
 
 }
-
+.prefacio {
+    text-align: justify;
+    margin: 20px auto;
+    max-width: 700px;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    font-size: 12px;
+    background-color: #f8f6f6;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 body {
     background-image: url();
     background-color: #e6dede;
