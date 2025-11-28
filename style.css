@@ -61,6 +61,7 @@ nav {
   left: 0;
   width: 100%;              /* ocupa toda a largura da tela */
   background-color: #0c0c0c;
+  padding : 10px;
 
 }
 .prefacio {
