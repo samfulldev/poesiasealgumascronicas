@@ -47,6 +47,18 @@ const poesias = [
     "Porta almas.txt",
     "Pensar ou sentir.txt",
     "Sertralina.txt",
+    "Poema Atômico.txt",
+    "Doce para dormir.txt",
+    "Peso bobo.txt",
+    "Financiada ate a morte.txt",
+    "Viuva de porcelana.txt",
+    "107.txt",
+    "Figuras da vida real.txt",
+    "Sensatez canina.txt",
+    "Vitamina R.txt",
+    "Eternos ate o fim.txt",
+    "Breve vive uma poesia.txt",
+    "Nua e crua.txt",
 ];
 
 // Mesma coisa para crônicas:
