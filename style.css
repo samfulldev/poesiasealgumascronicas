@@ -78,8 +78,8 @@ nav {
 body {
     background-image: url();
     background-color: #e6dede;
-    margin: 0;
-    padding: 0 20px;      
+    margin: 10px; 
+    padding-top: 60px;     
     font-size: 12px;
     color: #0c0c0c;
     font-family: 'Franklin Gothic Medium', sans-serif;
@@ -90,7 +90,7 @@ body {
         font-size: 25px;
         font-family: 'Franklin Gothic Medium', sans-serif;
         font-weight: bold;
-        text-align: start;    
+        text-align: start;
     }
 
     section#sobre, section#contatos {
