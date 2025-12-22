@@ -59,6 +59,15 @@ const poesias = [
     "Eternos ate o fim.txt",
     "Breve vive uma poesia.txt",
     "Nua e crua.txt",
+    "Pó eras tu.txt",
+    "Todo verde.txt",
+    "Novos Mares.txt",
+    "Encasulado.txt",
+    "Para sempre novidades.txt",
+    "1939.txt",
+    "O mundo não chama pelo nome.txt",
+    "Se fore.txt",
+    "Chave da porta.txt",
 ];
 
 // Mesma coisa para crônicas:
