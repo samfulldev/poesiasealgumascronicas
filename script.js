@@ -45,6 +45,7 @@ const poesias = [
     "Casal de um.txt",
     "Super-homens.txt",
     "Porta almas.txt",
+    "Se fores.txt",
     "Pensar ou sentir.txt",
     "Sertralina.txt",
     "Poema Atômico.txt",
@@ -66,7 +67,6 @@ const poesias = [
     "Para sempre novidades.txt",
     "1939.txt",
     "O mundo não chama pelo nome.txt",
-    "Se fore.txt",
     "Chave da porta.txt",
 ];
 
