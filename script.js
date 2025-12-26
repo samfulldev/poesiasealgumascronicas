@@ -68,6 +68,10 @@ const poesias = [
     "1939.txt",
     "O mundo não chama pelo nome.txt",
     "Chave da porta.txt",
+    "Quarto Fantasma",
+    "Saia devagar",
+    "Disfarçado de Brincar",
+    "Domingo não míngua",
 ];
 
 // Mesma coisa para crônicas:
