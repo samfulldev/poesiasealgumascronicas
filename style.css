@@ -1,7 +1,6 @@
 
 header {
     
-    background-color: white,
     padding: 10px 0;
     text-align: center;
     margin-top: 0;
@@ -13,7 +12,7 @@ header nav ul {
   justify-content: center;
   padding: 0;
   margin: 0;
-  gap: 30px;
+  gap: 80px;
 }
     nav ul {
       list-style: none;
@@ -27,7 +26,7 @@ header nav ul {
     }
 
     nav ul li a {
-      color: black;
+      color: white;
       text-decoration: none;
       font-weight: bold;
       font-family: Arial, sans-serif;
@@ -43,8 +42,7 @@ header nav ul {
 
 
 nav a {
-  font-size: 15px;       /* Tamanho da fonte */
-  color: #5A1E2E;        /* Cor do texto (laranja) */
+  font-size: 18px;       /* Tamanho da fonte */
   font-weight: bold;     /* Deixa o texto em negrito */
   text-decoration: none; /* Remove o sublinhado */
 }
@@ -57,36 +55,25 @@ a {
 nav {
   position: fixed;
   z-index: 1000;
-    top: 0;
+  top: 0;
   left: 0;
-  width: 100%;              /* ocupa toda a largura da tela */
-  background-color: #F0F8FF;
+  background: white;
+  width: 100%;
   padding : 10px;
+  background: linear-gradient(90deg, #1e3c72, #2a5298, #d9d9d9, #ffffff);
+}
 
-}
-.prefacio {
-    text-align: justify;
-    margin: 20px auto;
-    max-width: 700px;
-    font-family: 'Franklin Gothic Medium', sans-serif;
-    font-size: 12px;
-    background-color: ;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
 body {
-    background-image: url();
-    background-color: white;
+  background: #ffffff;
     margin: 10px; 
     padding-top: 60px;     
     font-size: 12px;
-    color: #5A1E2E
+    color: black;
     font-family: 'Franklin Gothic Medium', sans-serif;
     }
 
     h1 {
-        color: black;
+        color: white;
         font-size: 25px;
         font-family: 'Franklin Gothic Medium', sans-serif;
         font-weight: bold;
@@ -146,9 +133,7 @@ body {
   padding: 20px;
   font-size: 18px;
   line-height: 1.3;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background:  #ffffff;
   white-space: pre-line;
   font-style: italic;
 
@@ -165,8 +150,8 @@ body {
 }
 
 footer {
-  background-color: white
-  color: #0c0c0c;
+  background: black;
+  color: white;
   text-align: center;
   font-family: 'Trebuchet MS', sans-serif;
   font-size: 16px;
@@ -196,7 +181,7 @@ footer a {
 }
 
 footer a.email {
-  color: #d62828; /* vermelho discreto */
+  color: #3399FF; /* vermelho discreto */
 }
 
 footer a.email:hover {
@@ -241,17 +226,17 @@ footer a.whatsapp:hover {
   margin: 40px auto;
   max-width: 500px;
   padding: 0 20px;
+  background: #ffffff;
 }
 
 .autor-texto {
   flex: 1;
-  min-width: 250px;
-  max-width: 700px;
+  min-width: 500px;
+  max-width: 1000px;
   text-align: justify;
   font-family: Arial, sans-serif;
-  background-color: black,
+  font-size: 16px;
   padding: 10px;
-  border-radius: 8px;
 }
 
 /* Novo bloco apenas para imagem */
@@ -261,9 +246,6 @@ footer a.whatsapp:hover {
   border-radius: 12px;
   display: block;
 }
-
-
-
 
 .leitura-container {
   text-align: center;
@@ -297,6 +279,84 @@ footer a.whatsapp:hover {
   box-shadow: 0 0 5px rgba(165, 42, 42, 0.5);
   outline: none;
 }
+
+.contato-section {
+  background: #dfe4e2;
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin-top: 40px;
+  scroll-margin-top: 140px;
+  text-align: center;
+}
+
+.contato-section h1 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #0a2f45;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.form-contato {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-contato label {
+  text-align: left;
+  font-weight: bold;
+  color: #0a2f45;
+}
+
+.form-contato input,
+.form-contato textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #095d7e;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  background: white;
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+  border-color: #0db1e6;
+  box-shadow: 0 0 4px rgba(13, 177, 230, 0.4);
+}
+
+.btn-enviar {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.btn-enviar:hover {
+  color: #1e6ad1;
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVIDADE DO FORMULÁRIO */
+@media (max-width: 600px) {
+  .contato-section h1 {
+    font-size: 1.4rem;
+  }
+
+  .btn-enviar {
+    font-size: 1rem;
+  }
+}
+
 
 /* =============================
    ESTILO DOS BOTÕES DE TEXTOS

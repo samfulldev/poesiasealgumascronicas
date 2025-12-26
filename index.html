@@ -12,22 +12,22 @@
 <body>
 <header>       
   <nav>
-    
+    <h1>Marulho em versos <br>
+        das marés inquietas</h1>
     <ul>
-      <li><h1>Marulho de versos <br>
-        das marés inquietas</h1></li>
-      <li><a href="#inicio">Inicio</a></li>
-      <li> <a href="#sobre">Sobre o autor</a></li>
-      <li> <a href="#contatos">Contatos</a></li>
+      <li> <a href="#sobre">Sobre a obra</a></li>
+      <li><a href="https://www.instagram.com/samuel_melocunha" target="_blank">Instagram</a></li>
+      <li><a href="https://wa.me/+5585991969494" target="_blank" class="whatsapp">WhatsApp</a></li>
+      <li> <a href="#contatos">Mensagem</a></li>
     </ul>
   </nav>
    
 
 </header>
 <div class="leitura-container">
-  <label for="tipo" class="leitura-titulo">Escolha o tipo de leitura:</label>
+  <label for="tipo" class="leitura-titulo"></label>
   <select id="tipo" onchange="filtrarConteudo()" class="leitura-select">
-    <option value="">-- Selecione --</option>
+    <option value="">Escolha o tipo de leitura</option>
     <option value="poesias">Poesias</option>
     <option value="cronicas">Crônicas</option>
   </select>
@@ -39,10 +39,11 @@
 <div id="links-cronicas" class="links-container" style="display: none;"></div>
 <div class="autor-container" id="sobre">
   <div class="autor-texto">
-    <h2>Sobre o autor</h2> <br>
+    <h2>SOBRE A OBRA</h2> <br>
     <p>
-      O autor cearense Samuel Cunha, aborda através da linguagem poética e também por crônicas, temas diversos como amor, auto-conhecimento, problemas sociais, solidão, angustia e as inquietudes dos sentimentos humanos a partir de diferentes perspectivas. <br><br>
-      Seu compromisso com a arte da escrita é evidente em cada verso e narrativa que cria, convidando os leitores a embarcarem em uma jornada emocional e reflexiva.
+      A obra "Marulho em versos das marés inquietas" do poeta e cronista Samuel Cunha, revela a essência das inquietudes humanas. Com temas universais como o amor, a busca pela felicidade, o autoconhecimento, o vazio existencial, a solidão e a constante da vida que é sua eterna mutabilidade. <br> <br> 
+O autor a partir de múltiplas perspectivas — tanto como indivíduo recolhido em sua interioridade, como integrado à grande engrenagem social — consegue transformar os marulhos das marés inquietas em versos. Nessa travessia, sentimos as oscilações do mar bravio, com suas pesadas ondas e suaves maresias.
+<br><br>
     </p>
   </div>
   <div class="autor-foto">
@@ -50,13 +51,39 @@
   </div>
 </div>
 
+<section id="contatos" class="contato-section">
+
+  <h1>Fale comigo</h1>
+
+ <form class="form-contato" 
+      action="https://formsubmit.co/e2acd4f0029da542703826b46baf3475" method="POST">
+
+    <label for="nome">Nome</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="email">E-mail</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="mensagem">Mensagem</label>
+    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+    <!-- Redirecionamento após envio -->
+    <input type="hidden" name="_after" value="redirect">
+    <input type="hidden" name="_redirect" value="https://samfulldev.github.io/portfolio-de-samuel-melo-cunha/Obrigado.html">
+    <input type="hidden" name="_next" value="https://samfulldev.github.io/portfolio-de-samuel-melo-cunha/Obrigado.html">
+
+    <!-- Assunto do e-mail -->
+    <input type="hidden" name="_subject" value="Nova mensagem do Portfólio">
+    <button type="submit" class="btn-enviar">Enviar</button>
+
+</form>
+
+</section>
+
 </main>
-<!-- FOOTER -->
+
 <footer>
-  <section id="contatos"></section>
-  <p>Se você quiser entrar em contato com o autor, escolha uma das opções abaixo:</p>
-  <a href="mailto:samuelcunhace@gmail.com" target="_blank" class="email">Enviar um e-mail</a>
-  <a href="https://wa.me/+5585991969494" target="_blank" class="whatsapp">WhatsApp</a>
+  <P>© 2025 Samuel Melo Cunha. Todos os direitos reservados.</P>
 </footer>
 <script src="./script.js"></script>
 </body>
