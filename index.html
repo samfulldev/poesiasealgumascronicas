@@ -9,21 +9,30 @@
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
 <header>       
   <nav>
     <h1>Marulho em versos <br>
         das marés inquietas</h1>
     <ul>
-      <li> <a href="#sobre">Sobre a obra</a></li>
+      <li><a>Sobre o autor</a></li>
       <li><a href="https://www.instagram.com/samuel_melocunha" target="_blank">Instagram</a></li>
       <li><a href="https://wa.me/+5585991969494" target="_blank" class="whatsapp">WhatsApp</a></li>
       <li> <a href="#contatos">Mensagem</a></li>
     </ul>
   </nav>
-   
-
 </header>
+
+<div class="autor-container" id="sobre">
+  <div class="autor-texto">
+    <h2>PREFÁCIL</h2> <br>
+    <p>A obra *Marulho em versos das marés inquietas*, do poeta e cronista Samuel Cunha, insere-se no horizonte da literatura contemporânea como um mergulho sensível das inquietações humanas.<br><br>
+    Livro do silêncio e da inquietude de noites em que o coração se fez mar. Do amor que se busca e se perde, da solidão que nos acompanha, do vazio que nos atravessa e da esperança que insiste em renascer. Temas universais, que se revelam sob a constante mutabilidade da vida, e que o autor percorre e os converte em matéria poética de rara intensidade. <br><br> 
+    Que o leitor se deixe levar, como quem caminha à beira-mar, entre tormenta e calmaria, para descobrir, em cada verso, um reflexo das próprias marés interiores.
+    </p>
+  </div>
+</div>
 <div class="leitura-container">
   <label for="tipo" class="leitura-titulo"></label>
   <select id="tipo" onchange="filtrarConteudo()" class="leitura-select">
@@ -32,24 +41,16 @@
     <option value="cronicas">Crônicas</option>
   </select>
 </div>
+
 <!-- PARTE DAS POESIAS COMEÇA AQUI -->
 <main>
 <div id="poesia-container" style="display: none;"></div>
 <div id="links-poesias" class="links-container"></div>
 <div id="links-cronicas" class="links-container" style="display: none;"></div>
-<div class="autor-container" id="sobre">
-  <div class="autor-texto">
-    <h2>SOBRE A OBRA</h2> <br>
-    <p>
-      A obra "Marulho em versos das marés inquietas" do poeta e cronista Samuel Cunha, revela a essência das inquietudes humanas. Com temas universais como o amor, a busca pela felicidade, o autoconhecimento, o vazio existencial, a solidão e a constante da vida que é sua eterna mutabilidade. <br> <br> 
-O autor a partir de múltiplas perspectivas — tanto como indivíduo recolhido em sua interioridade, como integrado à grande engrenagem social — consegue transformar os marulhos das marés inquietas em versos. Nessa travessia, sentimos as oscilações do mar bravio, com suas pesadas ondas e suaves maresias.
-<br><br>
-    </p>
-  </div>
-  <div class="autor-foto">
+
+ <div class="autor-foto">
     <img src="fotoblog.png" alt="Foto do autor">
   </div>
-</div>
 
 <section id="contatos" class="contato-section">
 
