@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marulho de versos de marés inquietas</title>
+    <title>Das turvas águas ao cais silente</title>
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -13,8 +13,8 @@
 <body>
 <header>       
   <nav>
-    <h1>Marulho em versos <br>
-        das marés inquietas</h1>
+    <h1> Das turvas águas <br>
+        ao cais sereno </h1>
     <ul>
       <li><a href="https://www.instagram.com/samuel_melocunha" target="_blank">Instagram</a></li>
       <li><a href="https://wa.me/+5585991969494" target="_blank" class="whatsapp">WhatsApp</a></li>
@@ -26,26 +26,29 @@
 <div class="autor-container" id="sobre">
   <div class="autor-texto">
     <h2>PREFÁCIL</h2> <br>
-    <p>A obra *Marulho em versos das marés inquietas*, do poeta e cronista Samuel Cunha, insere-se no horizonte da literatura contemporânea como um mergulho sensível das inquietações humanas.<br><br>
+    <p>A obra *Das turvas águas ao cais sereno*, do poeta Samuel Cunha, insere-se no horizonte da literatura contemporânea como um mergulho sensível das inquietações humanas.<br><br>
     Livro do silêncio e da inquietude de noites em que o coração se fez mar. Do amor que se busca e se perde, da solidão que nos acompanha, do vazio que nos atravessa e da esperança que insiste em renascer. Temas universais, que se revelam sob a constante mutabilidade da vida, e que o autor percorre e os converte em matéria poética de rara intensidade. <br><br> 
-    Que o leitor se deixe levar, como quem caminha à beira-mar, entre tormenta e calmaria, para descobrir, em cada verso, um reflexo das próprias marés interiores.
+    Que o leitor se deixe levar, como quem caminha à beira-mar, entre tormenta e calmaria, para descobrir, em cada verso, um reflexo das próprias águas interiores.
     </p>
   </div>
 </div>
 <div class="leitura-container">
   <label for="tipo" class="leitura-titulo"></label>
-  <select id="tipo" onchange="filtrarConteudo()" class="leitura-select">
-    <option value="">Escolha o tipo de leitura</option>
-    <option value="poesias">Poesias</option>
-    <option value="cronicas">Crônicas</option>
-  </select>
+  <select id="parte" onchange="filtrarConteudo()" class="leitura-select">
+  <option value="a-bordo">A bordo</option>
+  <option value="a-deriva">A deriva</option>
+  <option value="horizonte">Horizonte</option>
+</select>
+
 </div>
 
-<!-- PARTE DAS POESIAS COMEÇA AQUI -->
 <main>
-<div id="poesia-container" style="display: none;"></div>
-<div id="links-poesias" class="links-container"></div>
-<div id="links-cronicas" class="links-container" style="display: none;"></div>
+<div id="links-a-bordo" class="links-container"></div>
+<div id="links-a-deriva" class="links-container"></div>
+<div id="links-horizonte" class="links-container"></div>
+
+<div id="poesia-container" style="display:none;"></div>
+
 
  <div class="autor-foto">
     <img src="fotoblog.png" alt="Foto do autor">
@@ -67,12 +70,11 @@
     <label for="mensagem">Mensagem</label>
     <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
 
-    <!-- Redirecionamento após envio -->
+ 
     <input type="hidden" name="_after" value="redirect">
     <input type="hidden" name="_redirect" value="https://samfulldev.github.io/portfolio-de-samuel-melo-cunha/Obrigado.html">
     <input type="hidden" name="_next" value="https://samfulldev.github.io/portfolio-de-samuel-melo-cunha/Obrigado.html">
 
-    <!-- Assunto do e-mail -->
     <input type="hidden" name="_subject" value="Nova mensagem do Portfólio">
     <button type="submit" class="btn-enviar">Enviar</button>
 
