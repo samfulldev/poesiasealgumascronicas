@@ -272,6 +272,10 @@ footer a.whatsapp:hover {
   outline: none;
 }
 
+.sobre {
+  margin-top: 20px;
+}
+
 .contato-section {
   background: #dfe4e2;
   padding: 40px 20px;
