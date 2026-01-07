@@ -9,6 +9,15 @@ const obras = {
     "Penumbras.txt",
     "Alinhados.txt",
     "Encasulado.txt",
+    "O oco e o verso.txt",
+    "Há aroma no espinho.txt",
+    "Poesia não tem pátria.txt",
+    "Antes algumas coisas.txt",
+    "Brisa de palavras.txt",
+    "Imperatriz da cor.txt",
+    "A meu ver.txt",
+    "Quarto Fantasma.txt",
+    "Chave da porta.txt",
   ],
   "a-deriva": [
     "Casal de um.txt",
@@ -17,6 +26,22 @@ const obras = {
     "Pensar ou sentir.txt",
     "Sertralina.txt",
     "Poema Atômico.txt",
+    "Doce para dormir.txt",
+    "Peso bobo.txt",
+    "Financiada até a morte.txt",
+    "Viúva de porcelana.txt",
+    "107.txt",
+    "Figuras da vida real.txt",
+    "A Evolução da Espécie.txt",
+    "Autorresposta.txt",
+    "Compro, logo vivo.txt",
+    "Eternos até o fim.txt",
+    "Fake life.txt",
+    "Vitamina R.txt",
+    "Pó eras tu.txt",
+    "Sensatez canina.txt",
+    "Nua e crua.txt",
+
   ],
   "horizonte": [
     "1939.txt",
@@ -25,6 +50,14 @@ const obras = {
     "Por essa via.txt",
     "Novos Mares.txt",
     "Todo verde.txt",
+    "Um dia.txt",
+    "Poema cor de luz.txt",
+    "Breve vive uma poesia.txt",
+    "Orvalho.txt",
+    "O mundo não chama pelo nome.txt",
+    "Se fores.txt",
+    "Registro vitalício.txt",
+    "A Evolução da Espécie.txt"
   ]
 };
 
