@@ -57,7 +57,10 @@ const obras = {
     "O mundo não chama pelo nome.txt",
     "Se fores.txt",
     "Registro vitalício.txt",
-    "A Evolução da Espécie.txt"
+    "A Evolução da Espécie.txt",
+    "Disfarçado de brincar.txt",
+    "Domingo.txt",
+    
   ]
 };
 
